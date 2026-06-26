@@ -164,6 +164,39 @@ a{color:var(--blue);text-decoration:none}
 
 .note{background:var(--mist2);border:1px solid var(--line);border-left:3px solid var(--aqua);border-radius:12px;padding:16px 18px;font-size:13px;color:var(--gray)}
 
+/* ---------- SHOWROOM ---------- */
+.showroom{background:var(--grad);color:#fff;padding:0}
+.showroom::after{content:"";position:absolute;inset:0;background:radial-gradient(90% 50% at 85% 8%,rgba(43,196,230,.22),transparent 55%);pointer-events:none;z-index:1}
+.showroom .sr{position:relative;z-index:2;display:flex;flex-direction:column;height:100%}
+.sr-hero{position:relative;flex:0 0 43%;overflow:hidden}
+.sr-hero img{width:100%;height:100%;object-fit:cover;display:block}
+.sr-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,37,64,.12) 0%,rgba(10,37,64,.05) 45%,rgba(10,37,64,.85) 100%)}
+.sr-titles{position:absolute;left:46px;right:46px;bottom:26px;z-index:3}
+.sr-titles .kicker{color:var(--aqua)}
+.sr-titles .kicker::before{background:var(--aqua)}
+.sr-titles h2{color:#fff;font-size:46px;margin:10px 0 6px;letter-spacing:-.02em}
+.sr-titles p{color:#dbe8f7;font-size:15px;max-width:78%}
+.sr-main{flex:1;padding:18px 46px 0;display:grid;grid-template-columns:1.35fr 1fr;gap:30px}
+.sr-main p{color:#cfe0f5;font-size:12.5px;line-height:1.5}
+.sr-main p strong{color:#fff}
+.sr-thumbs{display:flex;gap:10px;margin-top:12px}
+.sr-thumbs>div{flex:1;min-width:0}
+.sr-thumbs .photo{width:100%;aspect-ratio:16/10;border-radius:10px;border:1px solid rgba(255,255,255,.15)}
+.sr-thumbs .cap{color:#9db8d8;font-size:9.5px;margin-top:5px}
+.sr-addr{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:22px 22px;backdrop-filter:blur(2px)}
+.sr-addr .lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--aqua);font-weight:700}
+.sr-addr .ad{font-family:'Fraunces';font-weight:600;font-size:19px;color:#fff;line-height:1.3;margin:10px 0 4px}
+.sr-addr .ct{font-size:12.5px;color:#cfe0f5;margin-bottom:16px}
+.sr-btn{display:inline-flex;align-items:center;gap:9px;background:var(--grad-aqua);color:#06243f;font-weight:700;font-size:13.5px;padding:12px 20px;border-radius:30px;letter-spacing:.01em}
+.sr-btn svg{width:16px;height:16px;stroke:#06243f;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sr-phone{margin-top:14px;font-size:12px;color:#9db8d8}.sr-phone b{color:#fff;font-weight:600}
+.sr-feats{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;padding:14px 46px 0}
+.sr-feat{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:8px 10px}
+.sr-feat svg{width:14px;height:14px;flex:none;stroke:var(--aqua);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.sr-feat span{font-size:10.5px;color:#e3eefb;font-weight:500;line-height:1.18}
+.sr-close{margin-top:auto;background:rgba(0,0,0,.2);border-top:1px solid rgba(255,255,255,.1);padding:13px 46px;text-align:center}
+.sr-close q{font-family:'Fraunces';font-style:italic;font-size:13.5px;color:#dbe8f7;quotes:none}
+
 /* responsive */
 @media(max-width:760px){
   .pad{padding:30px 26px}
@@ -245,7 +278,7 @@ a{color:var(--blue);text-decoration:none}
       <div class="toc-item"><span class="toc-n">15</span><span class="toc-t">Segmentos atendidos</span></div>
       <div class="toc-item"><span class="toc-n">16</span><span class="toc-t">Nossos diferenciais</span></div>
       <div class="toc-item"><span class="toc-n">17</span><span class="toc-t">A conveniência Tudo de Filtro</span></div>
-      <div class="toc-item"><span class="toc-n">18</span><span class="toc-t">Regiões atendidas</span></div>
+      <div class="toc-item"><span class="toc-n">18</span><span class="toc-t">Nosso showroom &amp; estrutura</span></div>
       <div class="toc-section">Prova &amp; contato</div>
       <div class="toc-item"><span class="toc-n">19</span><span class="toc-t">Cases de sucesso</span></div>
       <div class="toc-item"><span class="toc-n">20</span><span class="toc-t">Perguntas frequentes</span></div>
@@ -706,32 +739,52 @@ a{color:var(--blue);text-decoration:none}
   <span class="pmark">Como trabalhamos</span><span class="pnum">20</span>
 </section>
 
-<!-- 21 REGIÕES -->
-<section class="page">
-  <div class="pad">
-    <span class="kicker">Regiões atendidas</span>
-    <h2 class="serif" style="font-size:32px;margin:14px 0 6px">Da nossa base no Vale do Paraíba para todo o Brasil.</h2>
-    <div class="hgrid" style="margin-top:18px">
-      <div>
-        <p class="lead">Com sede em <strong>São José dos Campos</strong>, atendemos toda a região do Vale do Paraíba com instalação e assistência técnica presencial.</p>
-        <p style="margin-top:12px">E porque água de qualidade não tem fronteira, <strong>enviamos nossos produtos para todo o Brasil</strong> — com a mesma orientação técnica de quem está ao lado do cliente.</p>
-        <div class="cards" style="margin-top:18px;gap:10px">
-          <div class="card accent" style="padding:16px 18px"><h3 class="serif" style="font-size:15px;margin-bottom:2px">Atendimento presencial</h3><p style="font-size:13px">São José dos Campos e região do Vale do Paraíba — projeto, instalação e manutenção no local.</p></div>
-          <div class="card accent" style="padding:16px 18px"><h3 class="serif" style="font-size:15px;margin-bottom:2px">Envio para todo o Brasil</h3><p style="font-size:13px">Produtos das nossas linhas entregues em qualquer região, com suporte à distância.</p></div>
-        </div>
-      </div>
-      <div>
-        <div class="card" style="background:var(--grad);color:#fff;border:0;height:100%;display:flex;flex-direction:column;justify-content:center">
-          <div style="font-family:'Fraunces';font-weight:600;font-size:54px;color:#fff;line-height:1">SJC</div>
-          <p style="color:var(--aqua);font-weight:600;letter-spacing:.04em;margin-top:4px">Vale do Paraíba · SP</p>
-          <div class="divider" style="background:rgba(255,255,255,.15)"></div>
-          <p style="color:#cfe0f5;font-size:13.5px">Sede, showroom e central técnica. O ponto de partida de mais de 8.000 atendimentos.</p>
-          <p style="color:#fff;font-weight:600;margin-top:14px">🇧🇷 Envio nacional</p>
-        </div>
+<!-- 21 NOSSO SHOWROOM -->
+<section class="page showroom">
+  <div class="sr">
+    <div class="sr-hero">
+      <img src="assets/img/fachada.jpg" alt="Fachada da loja Tudo de Filtro em São José dos Campos">
+      <div class="sr-titles">
+        <span class="kicker">Nossa estrutura</span>
+        <h2 class="serif">Nosso Showroom</h2>
+        <p>Conheça nossa estrutura e descubra de perto as soluções completas em tratamento de água.</p>
       </div>
     </div>
+    <div class="sr-main">
+      <div>
+        <p>Na Tudo de Filtro, acreditamos que a melhor experiência começa antes mesmo da instalação. Nosso showroom foi criado para que clientes <strong>residenciais, empresas, condomínios e indústrias</strong> conheçam os equipamentos, comparem soluções e recebam uma consultoria especializada para encontrar o sistema ideal.</p>
+        <p style="margin-top:9px">Aqui você encontra <strong>atendimento técnico, demonstração de equipamentos</strong> e uma equipe preparada para orientar — do pequeno projeto residencial às grandes aplicações comerciais e industriais.</p>
+        <div class="sr-thumbs">
+          <div><div class="photo"><img src="assets/img/unidade_view.jpg" alt="Equipamento em demonstração"></div><div class="cap">Demonstração de equipamentos</div></div>
+          <div><div class="photo"><img src="assets/img/install-grande.jpg" alt="Solução industrial instalada"></div><div class="cap">Soluções comerciais e industriais</div></div>
+        </div>
+      </div>
+      <div class="sr-addr">
+        <div class="lbl">Visite nossa loja</div>
+        <div class="ad">Av. Heitor Villa-Lobos, 1300<br>Vila Ema</div>
+        <div class="ct">São José dos Campos – SP</div>
+        <a class="sr-btn" href="https://www.google.com/maps/search/?api=1&query=Tudo+de+Filtro+Av+Heitor+Villa-Lobos+1300+Vila+Ema+S%C3%A3o+Jos%C3%A9+dos+Campos" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Conheça nossa loja
+        </a>
+        <div class="sr-phone"><b>(12)&nbsp;3922-4407</b> &nbsp;·&nbsp; <b>(12)&nbsp;98285-5000</b><br>Seg–Sex 8h–18h · Sáb 8h–13h</div>
+      </div>
+    </div>
+    <div class="sr-feats">
+      <div class="sr-feat"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Atendimento especializado</span></div>
+      <div class="sr-feat"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Consultoria técnica</span></div>
+      <div class="sr-feat"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Demonstração de equipamentos</span></div>
+      <div class="sr-feat"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Assistência técnica</span></div>
+      <div class="sr-feat"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Instalação profissional</span></div>
+      <div class="sr-feat"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Peças e refis</span></div>
+      <div class="sr-feat"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Soluções para residências</span></div>
+      <div class="sr-feat"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span>Empresas e indústrias</span></div>
+    </div>
+    <div class="sr-close">
+      <q>Mais do que vender equipamentos, criamos soluções completas para garantir água de qualidade, segurança e tranquilidade para nossos clientes.</q>
+    </div>
   </div>
-  <span class="pmark">Como trabalhamos</span><span class="pnum">21</span>
+  <span class="pmark" style="z-index:3;color:#9db8d8">Nossa estrutura</span><span class="pnum" style="z-index:3;color:#9db8d8">21</span>
 </section>
 
 <!-- 22 CASES (abertura) -->
