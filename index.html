@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tudo de Filtro — Catálogo Institucional</title>
+<meta name="description" content="Especialistas em soluções completas para tratamento de água há mais de 38 anos. Catálogo institucional Tudo de Filtro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A2540; --ink2:#13314F;
+  --blue:#0C5BD6; --blue2:#1E78F0; --aqua:#2BC4E6;
+  --mist:#EAF2FB; --mist2:#F4F9FE; --paper:#FBFDFF;
+  --gray:#5C7185; --gray2:#8497A8; --line:#E3EBF3; --white:#fff;
+  --maxw:940px;
+  --grad:linear-gradient(135deg,#0A2540 0%,#0C3D7A 55%,#0C5BD6 100%);
+  --grad-aqua:linear-gradient(135deg,#0C5BD6 0%,#2BC4E6 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#dfe7f0;line-height:1.6;-webkit-font-smoothing:antialiased}
+.serif{font-family:'Fraunces',Georgia,serif}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.01em;color:var(--ink)}
+p{color:var(--gray);font-size:15px}
+strong{color:var(--ink2);font-weight:600}
+a{color:var(--blue);text-decoration:none}
+
+/* ---------- PAGE SHELL ---------- */
+.book{max-width:var(--maxw);margin:0 auto;padding:34px 18px 80px}
+.page{position:relative;background:var(--white);border-radius:16px;overflow:hidden;
+  box-shadow:0 18px 50px -22px rgba(10,37,64,.35);margin:0 auto 30px;
+  width:100%;aspect-ratio:1/1.414;display:flex;flex-direction:column}
+.pad{padding:64px 66px;flex:1;display:flex;flex-direction:column}
+.pnum{position:absolute;bottom:26px;right:34px;font-size:11px;letter-spacing:.18em;color:var(--gray2);font-weight:600}
+.pmark{position:absolute;bottom:26px;left:34px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray2);font-weight:600}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--blue)}
+.kicker::before{content:"";width:26px;height:2px;background:var(--grad-aqua);border-radius:2px}
+.lead{font-size:17px;line-height:1.65;color:var(--gray)}
+.divider{height:1px;background:var(--line);margin:22px 0}
+
+/* water drop tag */
+.drop{display:inline-block;width:8px;height:8px;border-radius:0 50% 50% 50%;transform:rotate(45deg);background:var(--grad-aqua)}
+
+/* ---------- COVER ---------- */
+.cover{background:var(--grad);color:#fff;justify-content:space-between}
+.cover::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(120% 80% at 85% 12%,rgba(43,196,230,.30),transparent 55%),
+  radial-gradient(80% 60% at 10% 95%,rgba(43,196,230,.16),transparent 60%);pointer-events:none}
+.cover .pad{position:relative;z-index:2;padding:62px 64px}
+.cover h1,.cover h2,.cover p{color:#fff}
+.c-top{display:flex;align-items:center;gap:14px}
+.c-logo{height:46px;width:46px;border-radius:12px;background:#fff;display:grid;place-items:center;overflow:hidden}
+.c-logo img{width:100%;height:100%;object-fit:cover}
+.c-wordmark{font-family:'Fraunces';font-weight:600;font-size:20px;letter-spacing:.01em}
+.c-wordmark small{display:block;font-family:'Inter';font-weight:500;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--aqua);margin-top:2px}
+.cover-mid{margin-top:auto}
+.cover-tag{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--aqua);font-weight:700}
+.cover h1{font-size:62px;font-weight:600;margin:20px 0 0;letter-spacing:-.02em}
+.cover .sub{font-size:18px;color:#cfe0f5;max-width:80%;margin-top:20px}
+.cover-foot{display:flex;justify-content:space-between;align-items:flex-end;font-size:12.5px;color:#b9cde8;letter-spacing:.04em}
+.cover-foot b{color:#fff;font-weight:600}
+.waveline{display:flex;gap:5px;margin:30px 0 8px}
+.waveline span{height:5px;border-radius:3px;background:var(--aqua);opacity:.85}
+
+/* ---------- SUMÁRIO ---------- */
+.toc{columns:2;column-gap:48px}
+.toc-item{display:flex;align-items:baseline;gap:10px;break-inside:avoid;padding:9px 0;border-bottom:1px dashed var(--line)}
+.toc-n{font-family:'Fraunces';font-weight:600;color:var(--blue);font-size:14px;min-width:26px}
+.toc-t{flex:1;font-size:13.5px;color:var(--ink2);font-weight:500}
+.toc-section{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gray2);font-weight:700;margin:18px 0 4px;break-inside:avoid}
+
+/* ---------- GENERIC BLOCKS ---------- */
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.photo{border-radius:14px;overflow:hidden;background:var(--mist);position:relative}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo.tall{aspect-ratio:3/4}
+.photo.wide{aspect-ratio:16/10}
+.cap{font-size:11px;color:var(--gray2);margin-top:8px;letter-spacing:.02em}
+
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
+.stat{background:var(--mist2);border:1px solid var(--line);border-radius:14px;padding:20px 16px;text-align:center}
+.stat .n{font-family:'Fraunces';font-weight:600;font-size:32px;color:var(--blue);line-height:1}
+.stat .l{font-size:11px;color:var(--gray);margin-top:7px;letter-spacing:.02em;line-height:1.35}
+
+.cards{display:grid;gap:14px}
+.cards.c2{grid-template-columns:1fr 1fr}
+.cards.c3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px;position:relative}
+.card.accent{border-left:3px solid var(--blue)}
+.card h3{font-size:18px;margin-bottom:7px}
+.card p{font-size:13.5px}
+.ico{width:42px;height:42px;border-radius:11px;background:var(--mist);display:grid;place-items:center;margin-bottom:14px}
+.ico svg{width:22px;height:22px;stroke:var(--blue);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ico.solid{background:var(--grad-aqua)}
+.ico.solid svg{stroke:#fff}
+
+.pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
+.pill{font-size:12px;font-weight:600;color:var(--ink2);background:var(--mist);border:1px solid var(--line);border-radius:30px;padding:7px 15px}
+.pill .drop{margin-right:6px;width:7px;height:7px}
+
+.feat{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line)}
+.feat:last-child{border-bottom:0}
+.feat .fi{flex:none;width:34px;height:34px;border-radius:9px;background:var(--mist);display:grid;place-items:center}
+.feat .fi svg{width:18px;height:18px;stroke:var(--blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.feat h4{font-size:14.5px;font-weight:600;color:var(--ink2);margin-bottom:2px}
+.feat p{font-size:13px}
+
+/* section divider page */
+.sec{background:var(--grad);color:#fff;justify-content:center}
+.sec::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 70% at 80% 20%,rgba(43,196,230,.28),transparent 55%)}
+.sec .pad{position:relative;z-index:2}
+.sec h2,.sec p{color:#fff}
+.sec .big{font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--aqua);font-weight:700}
+.sec h2{font-size:46px;margin:14px 0 16px}
+.sec .sub{color:#cfe0f5;font-size:16px;max-width:78%}
+.sec-list{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px;max-width:88%}
+.sec-list div{display:flex;gap:11px;align-items:center;font-size:14px;color:#dce8f7;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.sec-list b{color:var(--aqua);font-family:'Fraunces';font-weight:600}
+
+/* product page header */
+.phead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:4px}
+.tagchip{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--grad-aqua);padding:6px 13px;border-radius:30px}
+.spec-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:4px}
+.spec-strip div{background:#fff;padding:15px 16px}
+.spec-strip .k{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray2);font-weight:700}
+.spec-strip .v{font-size:14px;color:var(--ink2);font-weight:600;margin-top:3px}
+
+.quote{background:var(--grad);color:#fff;border-radius:16px;padding:38px 40px;position:relative;overflow:hidden}
+.quote::before{content:"\201C";position:absolute;top:-10px;left:24px;font-family:'Fraunces';font-size:140px;color:rgba(43,196,230,.25);line-height:1}
+.quote q{font-family:'Fraunces';font-size:23px;line-height:1.4;color:#fff;display:block;position:relative;z-index:2;quotes:none}
+.quote .by{margin-top:18px;font-size:13px;color:var(--aqua);letter-spacing:.04em;font-weight:600}
+
+/* clients grid */
+.clients{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:6px}
+.cli{aspect-ratio:5/3;border:1px solid var(--line);border-radius:12px;display:grid;place-items:center;padding:12px;background:#fff;text-align:center}
+.cli img{max-width:74%;max-height:48px;object-fit:contain;filter:grayscale(1);opacity:.78}
+.cli span{font-family:'Fraunces';font-weight:600;font-size:15px;color:var(--ink2);letter-spacing:-.01em}
+.cli small{display:block;font-family:'Inter';font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray2);font-weight:600;margin-top:3px}
+
+/* process steps */
+.steps{display:grid;gap:0;margin-top:4px}
+.step{display:grid;grid-template-columns:54px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
+.step:last-child{border-bottom:0}
+.step .sn{font-family:'Fraunces';font-weight:600;font-size:26px;color:#fff;background:var(--grad-aqua);width:48px;height:48px;border-radius:13px;display:grid;place-items:center}
+.step h4{font-size:16px;color:var(--ink2);margin-bottom:3px}
+.step p{font-size:13.5px}
+
+/* faq */
+.faq-item{padding:15px 0;border-bottom:1px solid var(--line)}
+.faq-item h4{font-size:15px;color:var(--ink2);display:flex;gap:10px}
+.faq-item h4 .q{color:var(--blue);font-family:'Fraunces';font-weight:600}
+.faq-item p{font-size:13.5px;margin-top:6px;padding-left:22px}
+
+/* contact */
+.contact-band{background:var(--grad);color:#fff;border-radius:16px;padding:34px 38px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.contact-band h3{color:#fff;font-size:22px}
+.cinfo{display:flex;gap:13px;align-items:flex-start;margin-top:14px}
+.cinfo .ci{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.12);display:grid;place-items:center;flex:none}
+.cinfo svg{width:18px;height:18px;stroke:var(--aqua);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cinfo .t{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua);font-weight:700}
+.cinfo .v{font-size:15px;color:#fff;font-weight:500}
+
+.note{background:var(--mist2);border:1px solid var(--line);border-left:3px solid var(--aqua);border-radius:12px;padding:16px 18px;font-size:13px;color:var(--gray)}
+
+/* responsive */
+@media(max-width:760px){
+  .pad{padding:30px 26px}
+  .hgrid,.contact-band{grid-template-columns:1fr;gap:18px}
+  .cover h1{font-size:42px}.sec h2{font-size:34px}
+  .stat-row{grid-template-columns:1fr 1fr}
+  .cards.c3{grid-template-columns:1fr}.cards.c2{grid-template-columns:1fr}
+  .clients{grid-template-columns:repeat(2,1fr)}
+  .toc,.sec-list{columns:1;grid-template-columns:1fr}
+  .page{aspect-ratio:auto}
+}
+@media print{
+  body{background:#fff}
+  .book{max-width:none;margin:0;padding:0}
+  .page{box-shadow:none;border-radius:0;margin:0;break-after:page;page-break-after:always;aspect-ratio:auto;height:297mm;overflow:hidden}
+  .pad{padding:17mm 16mm}
+  /* manter layout desktop no papel */
+  .hgrid,.contact-band{grid-template-columns:1fr 1fr!important}
+  .cards.c3{grid-template-columns:repeat(3,1fr)!important}
+  .cards.c2{grid-template-columns:1fr 1fr!important}
+  .clients{grid-template-columns:repeat(4,1fr)!important}
+  .toc{columns:2!important}.sec-list{grid-template-columns:1fr 1fr!important}
+  .photo.tall{aspect-ratio:3/4;max-height:150mm}
+  .photo img{max-height:150mm}
+  @page{size:A4 portrait;margin:0}
+}
+</style>
+</head>
+<body>
+<main class="book">
+
+<!-- 01 CAPA -->
+<section class="page cover">
+  <div class="pad">
+    <div class="c-top">
+      <div class="c-logo"><img src="assets/img/logo-tdf.jpg" alt="Tudo de Filtro"></div>
+      <div class="c-wordmark">Tudo de Filtro<small>Tratamento de Água</small></div>
+    </div>
+    <div class="cover-mid">
+      <div class="cover-tag">Catálogo Institucional · 2026</div>
+      <h1 class="serif">Eleve o nível<br>da sua água.</h1>
+      <p class="sub">Especialistas em soluções completas para tratamento de água — da residência à indústria. Há mais de 38 anos.</p>
+      <div class="waveline">
+        <span style="width:62px;opacity:.95"></span><span style="width:40px;opacity:.7"></span>
+        <span style="width:26px;opacity:.5"></span><span style="width:16px;opacity:.35"></span>
+      </div>
+    </div>
+    <div class="cover-foot">
+      <div><b>tudodefiltro.com.br</b><br>São José dos Campos · SP</div>
+      <div style="text-align:right"><b>+38 anos</b> de mercado<br>+8.000 clientes atendidos</div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 SUMÁRIO -->
+<section class="page">
+  <div class="pad">
+    <span class="kicker">Sumário</span>
+    <h2 class="serif" style="font-size:34px;margin:14px 0 6px">O que você vai encontrar</h2>
+    <p class="lead" style="margin-bottom:22px">Um panorama completo de quem somos, do que fazemos e de por que milhares de famílias e empresas confiam na Tudo de Filtro.</p>
+    <div class="toc">
+      <div class="toc-section">A empresa</div>
+      <div class="toc-item"><span class="toc-n">01</span><span class="toc-t">Quem somos</span></div>
+      <div class="toc-item"><span class="toc-n">02</span><span class="toc-t">Nossa trajetória · 38 anos</span></div>
+      <div class="toc-item"><span class="toc-n">03</span><span class="toc-t">Nosso propósito</span></div>
+      <div class="toc-item"><span class="toc-n">04</span><span class="toc-t">Por que escolher a Tudo de Filtro</span></div>
+      <div class="toc-item"><span class="toc-n">05</span><span class="toc-t">Números que comprovam</span></div>
+      <div class="toc-section">Nossas soluções</div>
+      <div class="toc-item"><span class="toc-n">06</span><span class="toc-t">Filtro de Entrada · American Filter</span></div>
+      <div class="toc-item"><span class="toc-n">07</span><span class="toc-t">Tecnologia do filtro de entrada</span></div>
+      <div class="toc-item"><span class="toc-n">08</span><span class="toc-t">Tratamento de água de poço</span></div>
+      <div class="toc-item"><span class="toc-n">09</span><span class="toc-t">Abrandador de água dura</span></div>
+      <div class="toc-item"><span class="toc-n">10</span><span class="toc-t">Filtragem com ozônio</span></div>
+      <div class="toc-item"><span class="toc-n">11</span><span class="toc-t">Purificadores de água</span></div>
+      <div class="toc-item"><span class="toc-n">12</span><span class="toc-t">Bebedouros industriais</span></div>
+      <div class="toc-item"><span class="toc-n">13</span><span class="toc-t">Refis &amp; manutenção multimarca</span></div>
+      <div class="toc-section">Como trabalhamos</div>
+      <div class="toc-item"><span class="toc-n">14</span><span class="toc-t">Como funciona o processo</span></div>
+      <div class="toc-item"><span class="toc-n">15</span><span class="toc-t">Segmentos atendidos</span></div>
+      <div class="toc-item"><span class="toc-n">16</span><span class="toc-t">Nossos diferenciais</span></div>
+      <div class="toc-item"><span class="toc-n">17</span><span class="toc-t">A conveniência Tudo de Filtro</span></div>
+      <div class="toc-item"><span class="toc-n">18</span><span class="toc-t">Regiões atendidas</span></div>
+      <div class="toc-section">Prova &amp; contato</div>
+      <div class="toc-item"><span class="toc-n">19</span><span class="toc-t">Cases de sucesso</span></div>
+      <div class="toc-item"><span class="toc-n">20</span><span class="toc-t">Perguntas frequentes</span></div>
+      <div class="toc-item"><span class="toc-n">21</span><span class="toc-t">Fale com um especialista</span></div>
+    </div>
+  </div>
+  <span class="pmark">Tudo de Filtro</span><span class="pnum">02</span>
+</section>
+
+<!-- 03 QUEM SOMOS -->
+<section class="page">
+  <div class="pad">
+    <span class="kicker">Quem somos</span>
+    <div class="hgrid" style="margin-top:18px">
+      <div>
+        <h2 class="serif" style="font-size:36px;margin-bottom:16px">Há 38 anos, cuidando da água de quem confia em nós.</h2>
+        <p class="lead">A Tudo de Filtro nasceu de uma convicção simples: <strong>todos merecem água de qualidade.</strong> Desde então, transformamos essa crença em projetos, instalações e manutenções que melhoram a água de residências, comércios e indústrias em toda a região.</p>
+        <p style="margin-top:14px">Mais do que vender filtros, somos uma empresa de <strong>soluções completas em tratamento de água</strong>: diagnosticamos, indicamos a tecnologia certa, instalamos com equipe própria e acompanhamos o cliente no pós-venda. Tudo com a seriedade de quem construiu reputação ao longo de quase quatro décadas.</p>
+      </div>
+      <div>
+        <div class="photo wide"><img src="assets/img/install-fachada.jpg" alt="Equipe Tudo de Filtro em instalação"></div>
+        <div class="cap">Instalação de filtro de entrada por equipe própria Tudo de Filtro.</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="stat-row">
+      <div class="stat"><div class="n">+38</div><div class="l">anos de experiência no tratamento de água</div></div>
+      <div class="stat"><div class="n">+8.000</div><div class="l">clientes atendidos e fidelizados</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l">suporte técnico multimarca</div></div>
+      <div class="stat"><div class="n">1</div><div class="l">parceiro para toda a vida útil da sua água</div></div>
+    </div>
+  </div>
+  <span class="pmark">A empresa</span><span class="pnum">03</span>
+</section>
+
+<!-- 04 TRAJETÓRIA -->
+<section class="page">
+  <div class="pad">
+    <span class="kicker">Nossa trajetória</span>
+    <h2 class="serif" style="font-size:34px;margin:14px 0 6px">Experiência que se constrói em décadas, não em meses.</h2>
+    <p class="lead" style="margin-bottom:24px">A água muda. A tecnologia evolui. O que permanece é o compromisso de entregar a melhor solução para cada cliente — e foi isso que nos manteve relevantes por mais de 38 anos.</p>
+    <div class="steps">
+      <div class="step"><div class="sn">1</div><div><h4>A origem · especialistas em filtragem</h4><p>Começamos como referência em filtros e purificadores, atendendo famílias que buscavam água de melhor qualidade em casa.</p></div></div>
+      <div class="step"><div class="sn">2</div><div><h4>Expansão para serviços</h4><p>Agregamos instalação, manutenção e assistência técnica multimarca — passando a cuidar do equipamento durante toda a sua vida útil, de qualquer marca do mercado.</p></div></div>
+      <div class="step"><div class="sn">3</div><div><h4>Da casa à indústria</h4><p>Desenvolvemos soluções para água de poço, água dura, ozônio e bebedouros industriais, atendendo condomínios, comércios e grandes plantas industriais.</p></div></div>
+      <div class="step"><div class="sn">4</div><div><h4>Hoje · soluções completas</h4><p>Reunimos produto, projeto, instalação e pós-venda em um só lugar. Mais de 8.000 clientes já elevaram o nível da própria água conosco.</p></div></div>
+    </div>
+  </div>
+  <span class="pmark">A empresa</span><span class="pnum">04</span>
+</section>
+
+<!-- 05 PROPÓSITO -->
+<section class="page">
+  <div class="pad">
+    <span class="kicker">Nosso propósito</span>
+    <h2 class="serif" style="font-size:34px;margin:14px 0 18px">Água de qualidade para toda a casa — e para todo o trabalho.</h2>
+    <div class="cards c3">
+      <div class="card accent">
+        <div class="ico solid"><svg viewBox="0 0 24 24"><path d="M12 2C12 2 5 9 5 14a7 7 0 0 0 14 0C19 9 12 2 12 2z"/></svg></div>
+        <h3 class="serif">Missão</h3>
+        <p>Ajudar famílias, empresas e comércios a melhorarem a qualidade da sua água, unindo experiência e atenciosidade com qualidade e inovação.</p>
+      </div>
+      <div class="card accent">
+        <div class="ico solid"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/></svg></div>
+        <h3 class="serif">Visão</h3>
+        <p>Ser a referência regional em soluções completas de tratamento de água, reconhecida pela confiança, pela competência técnica e pelo cuidado com cada cliente.</p>
+      </div>
+      <div class="card accent">
+        <div class="ico solid"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3 class="serif">Valores</h3>
+        <p>Confiança, transparência e excelência técnica. Atendimento próximo, soluções honestas e suporte que não termina na venda.</p>
+      </div>
+    </div>
+    <div class="quote" style="margin-top:26px">
+      <q>Acreditamos que a qualidade de vida começa em algo que muitos ignoram: a água que corre nas torneiras todos os dias. Cuidar dela é cuidar das pessoas.</q>
+      <div class="by">— Tudo de Filtro</div>
+    </div>
+  </div>
+  <span class="pmark">A empresa</span><span class="pnum">05</span>
+</section>
+
+<!-- 06 POR QUE ESCOLHER -->
+<section class="page">
+  <div class="pad">
+    <span class="kicker">Por que escolher a Tudo de Filtro</span>
+    <h2 class="serif" style="font-size:32px;margin:14px 0 18px">Seis razões para confiar a sua água a quem entende do assunto.</h2>
+    <div class="cards c2">
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 class="serif">Quase 4 décadas de experiência</h3><p>Mais de 38 anos resolvendo problemas de água dos mais simples aos mais complexos. Experiência que se traduz em diagnóstico certeiro.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h12"/></svg></div>
+        <h3 class="serif">Solução completa em um só lugar</h3><p>Produto, projeto, instalação e manutenção. Você não precisa de cinco fornecedores — precisa de um parceiro.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M14 2v6h6"/><path d="M4 13V4a2 2 0 0 1 2-2h8l6 6v12a2 2 0 0 1-2 2H6"/><path d="M3 17l3 3 5-5"/></svg></div>
+        <h3 class="serif">Assistência técnica multimarca</h3><p>Atendemos filtros e purificadores de todas as marcas do mercado, com mão de obra especializada e peças originais.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M16 7a4 4 0 1 0-8 0"/><rect x="4" y="7" width="16" height="13" rx="2"/></svg></div>
+        <h3 class="serif">Equipe própria, não terceirizada</h3><p>Quem te atende, projeta e instala faz parte da nossa casa. Responsabilidade do começo ao fim.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3 class="serif">Atendimento próximo e consultivo</h3><p>Um especialista entende o seu caso antes de indicar qualquer solução. Sem empurrar produto — resolvendo o problema certo.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3 class="serif">Suporte que continua depois da venda</h3><p>Acompanhamento, lembretes de troca e manutenção programada. A gente avisa, vai até você e faz a troca.</p>
+      </div>
+    </div>
+  </div>
+  <span class="pmark">A empresa</span><span class="pnum">06</span>
+</section>
+
+<!-- 07 NÚMEROS -->
+<section class="page sec">
+  <div class="pad">
+    <div class="big">Números que comprovam</div>
+    <h2 class="serif">A confiança de quem<br>construiu reputação.</h2>
+    <p class="sub">Não falamos de água por improviso. Falamos por experiência acumulada, cliente após cliente, instalação após instalação.</p>
+    <div class="sec-list">
+      <div><b>+38</b> anos de mercado ininterruptos</div>
+      <div><b>+8.000</b> clientes atendidos</div>
+      <div><b>100%</b> de suporte técnico próprio</div>
+      <div><b>∞</b> marcas atendidas na assistência</div>
+      <div><b>7</b> linhas de solução para cada tipo de água</div>
+      <div><b>1</b> compromisso: elevar o nível da sua água</div>
+    </div>
+  </div>
+  <span class="pnum" style="color:#9db8d8">07</span>
+</section>
+
+<!-- 08 SOLUÇÕES (abertura) -->
+<section class="page sec">
+  <div class="pad">
+    <div class="big">Nossas soluções</div>
+    <h2 class="serif">Para cada água,<br>uma solução certa.</h2>
+    <p class="sub">Nenhuma água é igual à outra. Por isso, oferecemos um portfólio completo — da torneira da cozinha à entrada de uma indústria.</p>
+    <div class="sec-list" style="grid-template-columns:1fr 1fr">
+      <div><b>01</b> Filtro de Entrada · American Filter</div>
+      <div><b>02</b> Tratamento de água de poço</div>
+      <div><b>03</b> Abrandador de água dura</div>
+      <div><b>04</b> Filtragem com ozônio</div>
+      <div><b>05</b> Purificadores de água</div>
+      <div><b>06</b> Bebedouros industriais</div>
+      <div><b>07</b> Refis &amp; manutenção multimarca</div>
+      <div><b>08</b> Acessórios &amp; peças</div>
+    </div>
+  </div>
+  <span class="pnum" style="color:#9db8d8">08</span>
+</section>
+
+<!-- 09 FILTRO DE ENTRADA -->
+<section class="page">
+  <div class="pad">
+    <div class="phead">
+      <div><span class="kicker">Solução 01</span><h2 class="serif" style="font-size:32px;margin-top:12px">Filtro de Entrada<br>American Filter</h2></div>
+      <span class="tagchip">Linha Premium</span>
+    </div>
+    <div class="hgrid" style="margin-top:16px">
+      <div>
+        <p class="lead">Um único filtro na entrada da casa. <strong>Toda a água tratada</strong> — em cada torneira, chuveiro e eletrodoméstico.</p>
+        <p style="margin-top:12px">O American Filter retém sedimentos, ferrugem e impurezas sólidas antes que cheguem ao seu dia a dia. O resultado é água mais limpa no banho, na cozinha e no consumo — e proteção real para o que está por trás das paredes.</p>
+        <div class="feat" style="margin-top:14px">
+          <div class="fi"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><h4>Protege a casa inteira</h4><p>Caixa d'água, máquina de lavar, aquecedores, purificadores e todo o sistema hidráulico.</p></div>
+        </div>
+        <div class="feat">
+          <div class="fi"><svg viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div>
+          <div><h4>Alta vazão, sem perda de pressão</h4><p>Você filtra a água sem sacrificar o jato do chuveiro.</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="photo tall"><img src="assets/img/unidade_view.jpg" alt="Filtro de entrada American Filter"></div>
+        <div class="cap">Unidade American Filter — corpo em aço inox 304.</div>
+      </div>
+    </div>
+    <div class="spec-strip">
+      <div><div class="k">Modelos</div><div class="v">600 a 6.000 L/h</div></div>
+      <div><div class="k">Aplicação</div><div class="v">Residências · Condomínios</div></div>
+      <div><div class="k">Garantia</div><div class="v">10 anos</div></div>
+    </div>
+  </div>
+  <span class="pmark">Soluções</span><span class="pnum">09</span>
+</section>
+
+<!-- 10 TECNOLOGIA FE -->
+<section class="page">
+  <div class="pad">
+    <span class="kicker">Solução 01 · Tecnologia</span>
+    <h2 class="serif" style="font-size:30px;margin:12px 0 6px">Por dentro do American Filter</h2>
+    <p class="lead" style="margin-bottom:18px">Nem todo filtro de entrada é igual. O nosso reúne, em um só produto, características que dificilmente se encontram juntas no Brasil.</p>
+    <div class="hgrid">
+      <div>
+        <div class="feat"><div class="fi"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="3"/></svg></div><div><h4>Corpo em aço inox 304 com banho de níquel</h4><p>Unido por solda a laser interna — por fora, sem rebarbas e sem emendas. Acabamento perfeitamente liso e durável.</p></div></div>
+        <div class="feat"><div class="fi"><svg viewBox="0 0 24 24"><circle cx="7" cy="8" r="2.4"/><circle cx="15" cy="14" r="2.4"/><circle cx="17" cy="6" r="1.6"/></svg></div><div><h4>Elementos de quartzo + zeólita</h4><p>Cristais de alta performance que retêm sedimentos até 10× menores que um fio de cabelo. Troca dos elementos só a cada 3 anos.</p></div></div>
+        <div class="feat"><div class="fi"><svg viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><div><h4>Crepinas de alta vazão</h4><p>A menor perda de pressão do mercado — filtragem sem comprometer o conforto da água.</p></div></div>
+        <div class="feat"><div class="fi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div><div><h4>Válvula com by-pass integrado</h4><p>Manutenção simples sem interromper o abastecimento. Versão com válvula automática Runxin opcional.</p></div></div>
+      </div>
+      <div>
+        <div class="photo" style="aspect-ratio:4/5"><img src="assets/img/elemento_novo_usado.jpg" alt="Elemento filtrante novo e usado"></div>
+        <div class="cap">Elemento filtrante: à esquerda novo, à direita após o ciclo de uso.</div>
+      </div>
+    </div>
+    <div class="note" style="margin-top:16px"><strong>Único no Brasil.</strong> Aço inox 304, certificação INMETRO e 10 anos de garantia reunidos em um só filtro de entrada.</div>
+  </div>
+  <span class="pmark">Soluções</span><span class="pnum">10</span>
+</section>
+
+<!-- 11 ÁGUA DE POÇO -->
+<section class="page">
+  <div class="pad">
+    <div class="phead">
+      <div><span class="kicker">Solução 02</span><h2 class="serif" style="font-size:31px;margin-top:12px">Tratamento de<br>Água de Poço · Iron Free</h2></div>
+      <span class="tagchip">Poço &amp; Mina</span>
+    </div>
+    <div class="hgrid" style="margin-top:16px">
+      <div>
+        <p class="lead">Água de poço com <strong>ferro, manganês, enxofre ou taninos</strong>? O Iron Free trata na fonte, antes que o problema chegue à sua casa.</p>
+        <p style="margin-top:12px">Por oxidação e filtragem natural — <strong>sem sal e sem produtos químicos</strong> — o sistema elimina sabores, odores e manchas, protegendo encanamentos, eletrodomésticos e o conforto de toda a família.</p>
+        <div class="pills" style="margin-top:16px">
+          <span class="pill"><span class="drop"></span>Poço artesiano</span>
+          <span class="pill"><span class="drop"></span>Poço caipira &amp; mina</span>
+          <span class="pill"><span class="drop"></span>Captação de rio</span>
+          <span class="pill"><span class="drop"></span>Uso comercial</span>
+        </div>
+      </div>
+      <div>
+        <div class="photo tall"><img src="assets/img/agua_ferrugem.jpg" alt="Água com ferro e manganês"></div>
+        <div class="cap">Água de poço com excesso de ferro — antes do tratamento Iron Free.</div>
+      </div>
+    </div>
+    <div class="cards c3" style="margin-top:18px">
+      <div class="card accent"><h3 class="serif" style="font-size:16px">Sem manchas</h3><p>Acaba com manchas em pias, louças, roupas e vasos sanitários.</p></div>
+      <div class="card accent"><h3 class="serif" style="font-size:16px">Baixa manutenção</h3><p>Sem sal, sem químicos. Vida útil do elemento de 2 a 3 anos.</p></div>
+      <div class="card accent"><h3 class="serif" style="font-size:16px">1.500 a 3.500 L/h</h3><p>Capacidades padrão e projetos customizados conforme a análise da água.</p></div>
+    </div>
+  </div>
+  <span class="pmark">Soluções</span><span class="pnum">11</span>
+</section>
+
+<!-- 12 ABRANDADOR -->
+<section class="page">
+  <div class="pad">
+    <div class="phead">
+      <div><span class="kicker">Solução 03</span><h2 class="serif" style="font-size:31px;margin-top:12px">Abrandador de<br>Água Dura · Scale Stop</h2></div>
+      <span class="tagchip">Anti-incrustação</span>
+    </div>
+    <p class="lead" style="margin-top:16px">Água dura entope encanamentos, mancha vidros e reduz a vida útil de aquecedores, boilers e máquinas. O Scale Stop resolve isso com a tecnologia <strong>TAC — Template Assisted Crystallization.</strong></p>
+    <div class="hgrid" style="margin-top:18px">
+      <div>
+        <div class="feat"><div class="fi"><svg viewBox="0 0 24 24"><path d="M12 3l3 6 6 .9-4.5 4.3L18 21l-6-3-6 3 1.5-6.8L3 9.9 9 9z"/></svg></div><div><h4>Transforma o calcário em microcristais</h4><p>O cálcio e o magnésio viram cristais estáveis que não aderem às superfícies — e seguem suspensos na água.</p></div></div>
+        <div class="feat"><div class="fi"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></div><div><h4>Sem sal, sem regeneração química</h4><p>Não gera efluente salino. Ecologicamente sustentável e de baixíssima manutenção (mídia a cada 3–6 anos).</p></div></div>
+        <div class="feat"><div class="fi"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>Preserva os minerais benéficos</h4><p>Combate a incrustação sem desmineralizar a água.</p></div></div>
+      </div>
+      <div>
+        <div class="card" style="background:var(--grad);color:#fff;border:0">
+          <h3 class="serif" style="color:#fff;font-size:20px">Onde aplicar</h3>
+          <div class="pills" style="margin-top:14px">
+            <span class="pill" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#fff">Residências</span>
+            <span class="pill" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#fff">Condomínios</span>
+            <span class="pill" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#fff">Comércios</span>
+            <span class="pill" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#fff">Indústrias</span>
+          </div>
+          <p style="color:#cfe0f5;margin-top:18px;font-size:13.5px">Complementar ao filtro de entrada: enquanto um retém os sólidos, o outro impede a incrustação. Juntos, protegem toda a instalação hidráulica.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="pmark">Soluções</span><span class="pnum">12</span>
+</section>
+
+<!-- 13 OZÔNIO -->
+<section class="page">
+  <div class="pad">
+    <div class="phead">
+      <div><span class="kicker">Solução 04</span><h2 class="serif" style="font-size:31px;margin-top:12px">Filtragem<br>com Ozônio</h2></div>
+      <span class="tagchip">Tecnologia avançada</span>
+    </div>
+    <p class="lead" style="margin-top:16px">Para quem busca um nível superior de tratamento, a filtragem com ozônio age na qualidade da água de forma avançada — combatendo odores, sabores e impurezas com uma das tecnologias mais reconhecidas do setor.</p>
+    <div class="cards c3" style="margin-top:22px">
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3 class="serif" style="font-size:17px">Ação avançada</h3><p>Tratamento de alto desempenho para água com exigências mais rigorosas de qualidade.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg></div>
+        <h3 class="serif" style="font-size:17px">Sem sabor e sem odor</h3><p>Reduz gostos e cheiros indesejados, entregando água mais agradável no consumo.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3 class="serif" style="font-size:17px">Projeto sob medida</h3><p>Dimensionado conforme a sua necessidade — residencial, comercial ou industrial.</p>
+      </div>
+    </div>
+    <div class="note" style="margin-top:24px"><strong>Indicação técnica.</strong> A tecnologia ideal depende sempre da análise da sua água. Nossa equipe avalia o caso antes de recomendar a melhor configuração.</div>
+  </div>
+  <span class="pmark">Soluções</span><span class="pnum">13</span>
+</section>
+
+<!-- 14 PURIFICADORES -->
+<section class="page">
+  <div class="pad">
+    <div class="phead">
+      <div><span class="kicker">Solução 05</span><h2 class="serif" style="font-size:31px;margin-top:12px">Purificadores<br>de Água</h2></div>
+      <span class="tagchip">Multimarca</span>
+    </div>
+    <div class="hgrid" style="margin-top:16px">
+      <div>
+        <p class="lead">Água tratada, gelada e na hora — direto no ponto de consumo. Trabalhamos com <strong>purificadores de diversas marcas</strong>, para residências, escritórios e comércios.</p>
+        <p style="margin-top:12px">E o melhor: além de vender, cuidamos. Fazemos a <strong>instalação, a troca de refil e a assistência técnica</strong> do seu purificador — seja ele da nossa loja ou não.</p>
+        <div class="pills" style="margin-top:16px">
+          <span class="pill"><span class="drop"></span>Residencial</span>
+          <span class="pill"><span class="drop"></span>Escritórios</span>
+          <span class="pill"><span class="drop"></span>Comércio</span>
+          <span class="pill"><span class="drop"></span>Todas as marcas</span>
+        </div>
+      </div>
+      <div>
+        <div class="card accent"><h3 class="serif" style="font-size:17px">O que oferecemos</h3>
+          <div class="feat" style="padding:9px 0"><div class="fi"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><h4>Venda de purificadores</h4><p>As principais marcas do mercado.</p></div></div>
+          <div class="feat" style="padding:9px 0"><div class="fi"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><h4>Instalação especializada</h4><p>Com equipe própria e segura.</p></div></div>
+          <div class="feat" style="padding:9px 0"><div class="fi"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div><h4>Troca de refil &amp; manutenção</h4><p>De qualquer marca, no prazo certo.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="pmark">Soluções</span><span class="pnum">14</span>
+</section>
+
+<!-- 15 BEBEDOUROS -->
+<section class="page">
+  <div class="pad">
+    <div class="phead">
+      <div><span class="kicker">Solução 06</span><h2 class="serif" style="font-size:31px;margin-top:12px">Bebedouros<br>Industriais</h2></div>
+      <span class="tagchip">Alta demanda</span>
+    </div>
+    <p class="lead" style="margin-top:16px">Onde muita gente precisa de água o tempo todo, o bebedouro certo faz diferença. Soluções robustas em <strong>aço inox</strong>, para alta demanda de consumo em ambientes coletivos.</p>
+    <div class="cards c2" style="margin-top:20px">
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9 8h6"/></svg></div>
+        <h3 class="serif">Para ambientes coletivos</h3>
+        <p>Indústrias, fábricas, galpões, escolas, academias, clínicas, clubes e estabelecimentos comerciais de grande circulação.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></div>
+        <h3 class="serif">Robusto e higiênico</h3>
+        <p>Construção em aço inox, fácil de higienizar e dimensionada para suportar uso intenso ao longo do dia.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div>
+        <h3 class="serif">Capacidade sob medida</h3>
+        <p>Diferentes capacidades e quantidades de torneiras conforme o número de pessoas a atender.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M14 2v6h6"/><path d="M4 13V4a2 2 0 0 1 2-2h8l6 6v12a2 2 0 0 1-2 2H6"/></svg></div>
+        <h3 class="serif">Com manutenção garantida</h3>
+        <p>Instalação, troca de refil e assistência técnica feitas pela nossa equipe. Água sempre disponível.</p>
+      </div>
+    </div>
+  </div>
+  <span class="pmark">Soluções</span><span class="pnum">15</span>
+</section>
+
+<!-- 16 REFIS -->
+<section class="page">
+  <div class="pad">
+    <div class="phead">
+      <div><span class="kicker">Solução 07</span><h2 class="serif" style="font-size:31px;margin-top:12px">Refis &amp; Manutenção<br>Multimarca</h2></div>
+      <span class="tagchip">Pós-venda</span>
+    </div>
+    <p class="lead" style="margin-top:16px">Um filtro só protege se o refil estiver em dia. Por isso, mantemos um dos serviços mais completos da região: <strong>refis e manutenção para filtros e purificadores de todas as marcas.</strong></p>
+    <div class="hgrid" style="margin-top:18px">
+      <div>
+        <div class="feat"><div class="fi"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/></svg></div><div><h4>Refil de qualquer marca</h4><p>Encontramos o refil certo para o seu equipamento, mesmo que não tenha sido comprado conosco.</p></div></div>
+        <div class="feat"><div class="fi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-2.7 1.1V21a2 2 0 1 1-4 0v-.2A1.6 1.6 0 0 0 7 19.4a2 2 0 1 1-2.8-2.8l.1-.1A1.6 1.6 0 0 0 5.6 9 2 2 0 1 1 3 9h.2A1.6 1.6 0 0 0 5 6.3a2 2 0 1 1 2.8-2.8l.1.1A1.6 1.6 0 0 0 11 4.6V4a2 2 0 1 1 4 0v.2A1.6 1.6 0 0 0 19 5.6a2 2 0 1 1 2 2.8z"/></svg></div><div><h4>Assistência técnica especializada</h4><p>Mão de obra qualificada e peças originais. Diagnóstico honesto do que o seu equipamento realmente precisa.</p></div></div>
+        <div class="feat"><div class="fi"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><div><h4>Programa de troca programada</h4><p>Nós lembramos, avisamos e fazemos a troca para você — no prazo certo, sem você precisar controlar nada.</p></div></div>
+      </div>
+      <div>
+        <div class="quote" style="padding:30px 32px">
+          <q style="font-size:20px">A gente liga, avisa e faz a troca por você. Seu filtro sempre no ponto certo — sem dor de cabeça.</q>
+          <div class="by">Serviço de manutenção programada Tudo de Filtro</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="pmark">Soluções</span><span class="pnum">16</span>
+</section>
+
+<!-- 17 PROCESSO -->
+<section class="page">
+  <div class="pad">
+    <span class="kicker">Como funciona o processo</span>
+    <h2 class="serif" style="font-size:32px;margin:14px 0 6px">Da primeira conversa à água tratada.</h2>
+    <p class="lead" style="margin-bottom:22px">Um método claro, consultivo e sem surpresas — do diagnóstico ao acompanhamento de longo prazo.</p>
+    <div class="steps">
+      <div class="step"><div class="sn">1</div><div><h4>Diagnóstico</h4><p>Um especialista entende a sua água, a origem (rua, poço, mina), o consumo e os problemas que você enfrenta.</p></div></div>
+      <div class="step"><div class="sn">2</div><div><h4>Projeto &amp; indicação</h4><p>Recomendamos a solução certa para o seu caso — nem mais, nem menos do que você precisa — com transparência de preço e condições.</p></div></div>
+      <div class="step"><div class="sn">3</div><div><h4>Instalação</h4><p>Nossa equipe própria instala com segurança e acabamento limpo, no prazo combinado.</p></div></div>
+      <div class="step"><div class="sn">4</div><div><h4>Suporte &amp; manutenção</h4><p>Acompanhamos o equipamento, lembramos das trocas e cuidamos da assistência técnica por toda a vida útil.</p></div></div>
+    </div>
+  </div>
+  <span class="pmark">Como trabalhamos</span><span class="pnum">17</span>
+</section>
+
+<!-- 18 SEGMENTOS -->
+<section class="page">
+  <div class="pad">
+    <span class="kicker">Segmentos atendidos</span>
+    <h2 class="serif" style="font-size:32px;margin:14px 0 6px">Da torneira de casa ao chão de fábrica.</h2>
+    <p class="lead" style="margin-bottom:20px">A mesma seriedade técnica, em qualquer escala de necessidade.</p>
+    <div class="cards c3">
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg></div><h3 class="serif" style="font-size:16px">Residências</h3><p>Famílias que querem água de qualidade em todas as torneiras.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M9 3v18M15 3v18"/></svg></div><h3 class="serif" style="font-size:16px">Condomínios</h3><p>Água filtrada para o prédio inteiro, protegendo a instalação coletiva.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div><h3 class="serif" style="font-size:16px">Indústrias</h3><p>Tratamento robusto para processos, equipamentos e consumo.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 21V8l8-5 8 5v13M9 21v-5h6v5"/></svg></div><h3 class="serif" style="font-size:16px">Comércio &amp; serviços</h3><p>Restaurantes, escritórios e lojas com água sempre adequada.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg></div><h3 class="serif" style="font-size:16px">Saúde &amp; clínicas</h3><p>Padrões exigentes de qualidade da água para o atendimento.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M6 9V5a6 6 0 0 1 12 0v4M4 9h16l-1 12H5z"/></svg></div><h3 class="serif" style="font-size:16px">Hotelaria &amp; coletivos</h3><p>Hotéis, academias, escolas e clubes de alta circulação.</p></div>
+    </div>
+  </div>
+  <span class="pmark">Como trabalhamos</span><span class="pnum">18</span>
+</section>
+
+<!-- 19 DIFERENCIAIS -->
+<section class="page sec">
+  <div class="pad">
+    <div class="big">Nossos diferenciais</div>
+    <h2 class="serif">O que nos torna<br>uma escolha segura.</h2>
+    <div class="sec-list" style="grid-template-columns:1fr 1fr;margin-top:26px">
+      <div><b>◆</b> +38 anos de experiência real</div>
+      <div><b>◆</b> Solução completa: produto + serviço</div>
+      <div><b>◆</b> Assistência técnica multimarca</div>
+      <div><b>◆</b> Equipe própria, não terceirizada</div>
+      <div><b>◆</b> Atendimento consultivo por especialista</div>
+      <div><b>◆</b> Mão de obra qualificada e peças originais</div>
+      <div><b>◆</b> Manutenção programada (a gente avisa)</div>
+      <div><b>◆</b> Tecnologia para cada tipo de água</div>
+    </div>
+    <p class="sub" style="margin-top:28px">Não vendemos só equipamentos. Entregamos tranquilidade — a certeza de que a sua água está em boas mãos por muitos anos.</p>
+  </div>
+  <span class="pnum" style="color:#9db8d8">19</span>
+</section>
+
+<!-- 20 CONVENIÊNCIA -->
+<section class="page">
+  <div class="pad">
+    <span class="kicker">A conveniência Tudo de Filtro</span>
+    <h2 class="serif" style="font-size:32px;margin:14px 0 6px">Tudo o que a sua água precisa, com um só parceiro.</h2>
+    <p class="lead" style="margin-bottom:20px">A maior comodidade não está em um produto — está em não precisar se preocupar com nada depois dele.</p>
+    <div class="cards c2">
+      <div class="card accent"><div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3 class="serif">Atendimento por WhatsApp</h3><p>Fale direto com um especialista, tire dúvidas e resolva seu caso sem burocracia.</p></div>
+      <div class="card accent"><div class="ico"><svg viewBox="0 0 24 24"><path d="M16 7a4 4 0 1 0-8 0"/><rect x="4" y="7" width="16" height="13" rx="2"/></svg></div><h3 class="serif">Equipe técnica própria</h3><p>Quem te atende é quem te instala e te dá suporte. Responsabilidade ponta a ponta.</p></div>
+      <div class="card accent"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><h3 class="serif">Troca programada</h3><p>Avisamos quando chega a hora, agendamos e fazemos a troca por você.</p></div>
+      <div class="card accent"><div class="ico"><svg viewBox="0 0 24 24"><path d="M14 2v6h6"/><path d="M4 13V4a2 2 0 0 1 2-2h8l6 6v12a2 2 0 0 1-2 2H6"/><path d="M3 17l3 3 5-5"/></svg></div><h3 class="serif">Assistência multimarca</h3><p>Cuidamos do seu equipamento mesmo que ele seja de outra marca ou loja.</p></div>
+    </div>
+  </div>
+  <span class="pmark">Como trabalhamos</span><span class="pnum">20</span>
+</section>
+
+<!-- 21 REGIÕES -->
+<section class="page">
+  <div class="pad">
+    <span class="kicker">Regiões atendidas</span>
+    <h2 class="serif" style="font-size:32px;margin:14px 0 6px">Da nossa base no Vale do Paraíba para todo o Brasil.</h2>
+    <div class="hgrid" style="margin-top:18px">
+      <div>
+        <p class="lead">Com sede em <strong>São José dos Campos</strong>, atendemos toda a região do Vale do Paraíba com instalação e assistência técnica presencial.</p>
+        <p style="margin-top:12px">E porque água de qualidade não tem fronteira, <strong>enviamos nossos produtos para todo o Brasil</strong> — com a mesma orientação técnica de quem está ao lado do cliente.</p>
+        <div class="cards" style="margin-top:18px;gap:10px">
+          <div class="card accent" style="padding:16px 18px"><h3 class="serif" style="font-size:15px;margin-bottom:2px">Atendimento presencial</h3><p style="font-size:13px">São José dos Campos e região do Vale do Paraíba — projeto, instalação e manutenção no local.</p></div>
+          <div class="card accent" style="padding:16px 18px"><h3 class="serif" style="font-size:15px;margin-bottom:2px">Envio para todo o Brasil</h3><p style="font-size:13px">Produtos das nossas linhas entregues em qualquer região, com suporte à distância.</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="background:var(--grad);color:#fff;border:0;height:100%;display:flex;flex-direction:column;justify-content:center">
+          <div style="font-family:'Fraunces';font-weight:600;font-size:54px;color:#fff;line-height:1">SJC</div>
+          <p style="color:var(--aqua);font-weight:600;letter-spacing:.04em;margin-top:4px">Vale do Paraíba · SP</p>
+          <div class="divider" style="background:rgba(255,255,255,.15)"></div>
+          <p style="color:#cfe0f5;font-size:13.5px">Sede, showroom e central técnica. O ponto de partida de mais de 8.000 atendimentos.</p>
+          <p style="color:#fff;font-weight:600;margin-top:14px">🇧🇷 Envio nacional</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="pmark">Como trabalhamos</span><span class="pnum">21</span>
+</section>
+
+<!-- 22 CASES (abertura) -->
+<section class="page sec">
+  <div class="pad">
+    <div class="big">Cases de sucesso</div>
+    <h2 class="serif">Empresas que confiam<br>a sua água a nós.</h2>
+    <p class="sub">De indústrias globais a instituições locais, organizações de diferentes setores escolheram a Tudo de Filtro para tratar a água onde ela é essencial.</p>
+    <div class="sec-list" style="grid-template-columns:1fr 1fr 1fr;gap:8px 20px;margin-top:30px">
+      <div style="border:0">Indústria</div><div style="border:0">Alimentos</div><div style="border:0">Saúde</div>
+      <div style="border:0">Cooperativas</div><div style="border:0">Eventos</div><div style="border:0">Incorporação</div>
+    </div>
+  </div>
+  <span class="pnum" style="color:#9db8d8">22</span>
+</section>
+
+<!-- 23 CLIENTES GRID -->
+<section class="page">
+  <div class="pad">
+    <span class="kicker">Cases de sucesso · Clientes</span>
+    <h2 class="serif" style="font-size:30px;margin:12px 0 6px">Confiança que se mede em nomes.</h2>
+    <p class="lead" style="margin-bottom:18px">Algumas das empresas que já trataram a sua água com a Tudo de Filtro.</p>
+    <div class="clients">
+      <div class="cli"><img src="assets/logos/imerys.webp" alt="Imerys"></div>
+      <div class="cli"><img src="assets/logos/mubea.svg" alt="Mubea"></div>
+      <div class="cli"><img src="assets/logos/pilkington.svg" alt="Pilkington"></div>
+      <div class="cli"><img src="assets/logos/sicoob.svg" alt="Sicoob"></div>
+      <div class="cli"><img src="assets/logos/vammo.svg" alt="Vammo"></div>
+      <div class="cli"><span>De Nigris<small>Alimentos</small></span></div>
+      <div class="cli"><span>Katoen Natie<small>Logística</small></span></div>
+      <div class="cli"><span>Daido<small>Industrial</small></span></div>
+      <div class="cli"><span>Aberden<small>Alimentos</small></span></div>
+      <div class="cli"><span>VF Refeições<small>Food service</small></span></div>
+      <div class="cli"><span>Quaglia<small>Laboratório</small></span></div>
+      <div class="cli"><span>Zag<small>Biogás</small></span></div>
+      <div class="cli"><span>Inst. Harmonya<small>Saúde</small></span></div>
+      <div class="cli"><span>Oficina do Parque<small>Serviços</small></span></div>
+      <div class="cli"><span>Vila Mar<small>Águas Minerais</small></span></div>
+      <div class="cli"><span>EDL<small>Eventos</small></span></div>
+    </div>
+    <p class="cap" style="margin-top:16px">Clientes com negócios concluídos junto à Tudo de Filtro. Marcas e logotipos pertencem aos seus respectivos titulares.</p>
+  </div>
+  <span class="pmark">Cases</span><span class="pnum">23</span>
+</section>
+
+<!-- 24 CASES FOTOS -->
+<section class="page">
+  <div class="pad">
+    <span class="kicker">Cases de sucesso · Instalações</span>
+    <h2 class="serif" style="font-size:30px;margin:12px 0 16px">Projetos reais, água tratada de verdade.</h2>
+    <div class="hgrid">
+      <div class="photo tall"><img src="assets/img/install-grande.jpg" alt="Instalação de grande porte"></div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="photo wide"><img src="assets/img/install-condominio.jpg" alt="Instalação em condomínio"></div>
+        <div class="photo wide"><img src="assets/img/install-flores.jpg" alt="Instalação residencial American Filter"></div>
+      </div>
+    </div>
+    <div class="cards c3" style="margin-top:16px">
+      <div class="card" style="padding:16px"><h3 class="serif" style="font-size:15px">Residencial</h3><p style="font-size:12.5px">Filtro de entrada com acabamento limpo, integrado à fachada.</p></div>
+      <div class="card" style="padding:16px"><h3 class="serif" style="font-size:15px">Condomínio</h3><p style="font-size:12.5px">Água tratada para o prédio inteiro, na entrada de abastecimento.</p></div>
+      <div class="card" style="padding:16px"><h3 class="serif" style="font-size:15px">Industrial</h3><p style="font-size:12.5px">Sistemas de maior porte para alta vazão e demanda contínua.</p></div>
+    </div>
+  </div>
+  <span class="pmark">Cases</span><span class="pnum">24</span>
+</section>
+
+<!-- 25 DEPOIMENTO/DESTAQUE -->
+<section class="page">
+  <div class="pad" style="justify-content:center">
+    <div class="quote" style="padding:54px 50px">
+      <q style="font-size:27px">Em 38 anos, aprendemos que a maior tecnologia que oferecemos não é um filtro. É a confiança de saber que, do diagnóstico ao pós-venda, alguém de verdade está cuidando da sua água.</q>
+      <div class="by">Tudo de Filtro · Especialistas em soluções completas para tratamento de água</div>
+    </div>
+    <div class="stat-row" style="margin-top:30px">
+      <div class="stat"><div class="n">38</div><div class="l">anos de história</div></div>
+      <div class="stat"><div class="n">8 mil+</div><div class="l">clientes atendidos</div></div>
+      <div class="stat"><div class="n">7</div><div class="l">linhas de solução</div></div>
+      <div class="stat"><div class="n">1</div><div class="l">parceiro de confiança</div></div>
+    </div>
+  </div>
+  <span class="pmark">Tudo de Filtro</span><span class="pnum">25</span>
+</section>
+
+<!-- 26 FAQ -->
+<section class="page">
+  <div class="pad">
+    <span class="kicker">Perguntas frequentes</span>
+    <h2 class="serif" style="font-size:32px;margin:14px 0 16px">O que você precisa saber.</h2>
+    <div class="faq-item"><h4><span class="q">P.</span> Vocês atendem equipamentos de outras marcas?</h4><p>Sim. Somos especialistas em assistência técnica multimarca — vendemos, instalamos e damos manutenção em filtros e purificadores de todas as marcas do mercado.</p></div>
+    <div class="faq-item"><h4><span class="q">P.</span> Minha água é de poço. Vocês tratam?</h4><p>Sim. Nossa linha Iron Free trata água de poço, mina e rio, removendo ferro, manganês, enxofre e taninos — sem sal e sem produtos químicos.</p></div>
+    <div class="faq-item"><h4><span class="q">P.</span> Qual a diferença entre filtro de entrada e abrandador?</h4><p>O filtro de entrada retém sedimentos e impurezas sólidas; o abrandador combate a água dura (calcário). São complementares e, juntos, protegem toda a instalação hidráulica.</p></div>
+    <div class="faq-item"><h4><span class="q">P.</span> Vocês instalam ou só vendem o produto?</h4><p>Cuidamos de tudo: diagnóstico, projeto, instalação com equipe própria e manutenção. Você tem um só parceiro do início ao fim.</p></div>
+    <div class="faq-item"><h4><span class="q">P.</span> Como funciona a troca de refil?</h4><p>Temos um programa de manutenção programada: avisamos quando chega a hora, agendamos e fazemos a troca por você — de qualquer marca.</p></div>
+    <div class="faq-item"><h4><span class="q">P.</span> Atendem fora de São José dos Campos?</h4><p>O atendimento presencial cobre o Vale do Paraíba. Para outras regiões, enviamos nossos produtos para todo o Brasil com suporte à distância.</p></div>
+  </div>
+  <span class="pmark">Prova &amp; contato</span><span class="pnum">26</span>
+</section>
+
+<!-- 27 CONTATO -->
+<section class="page">
+  <div class="pad" style="justify-content:center">
+    <span class="kicker">Fale com um especialista</span>
+    <h2 class="serif" style="font-size:36px;margin:14px 0 8px">Vamos elevar o nível<br>da sua água?</h2>
+    <p class="lead" style="margin-bottom:24px;max-width:80%">Conte o seu caso para um especialista. A gente entende a sua água e indica a solução certa — sem compromisso.</p>
+    <div class="contact-band">
+      <div>
+        <h3 class="serif">Tudo de Filtro</h3>
+        <p style="color:#cfe0f5;margin-top:8px;font-size:14px">Especialistas em soluções completas para tratamento de água. Há mais de 38 anos.</p>
+        <div class="cinfo"><div class="ci"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div><div class="t">WhatsApp</div><div class="v">(12) 98285-5000</div></div></div>
+        <div class="cinfo"><div class="ci"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><div class="t">Horário</div><div class="v">Seg–Sex 8h–18h · Sáb 8h–13h</div></div></div>
+      </div>
+      <div>
+        <div class="cinfo"><div class="ci"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11z"/></svg></div><div><div class="t">Sede</div><div class="v">São José dos Campos · SP</div></div></div>
+        <div class="cinfo"><div class="ci"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div><div><div class="t">Site</div><div class="v">tudodefiltro.com.br</div></div></div>
+        <div class="cinfo"><div class="ci"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div><div><div class="t">Redes</div><div class="v">@tudodefiltro</div></div></div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:26px;font-family:'Fraunces';font-size:18px;color:var(--blue)">Eleve o nível da sua água.</p>
+  </div>
+  <span class="pmark">Prova &amp; contato</span><span class="pnum">27</span>
+</section>
+
+<!-- 28 CONTRACAPA -->
+<section class="page cover" style="justify-content:center">
+  <div class="pad" style="text-align:center;align-items:center;justify-content:center">
+    <div class="c-logo" style="height:60px;width:60px;margin:0 auto 20px"><img src="assets/img/logo-tdf.jpg" alt="Tudo de Filtro"></div>
+    <div class="c-wordmark" style="font-size:26px">Tudo de Filtro<small style="text-align:center">Tratamento de Água · desde 1988</small></div>
+    <div class="waveline" style="justify-content:center;margin:26px auto">
+      <span style="width:16px;opacity:.35"></span><span style="width:26px;opacity:.5"></span>
+      <span style="width:40px;opacity:.7"></span><span style="width:62px;opacity:.95"></span>
+      <span style="width:40px;opacity:.7"></span><span style="width:26px;opacity:.5"></span><span style="width:16px;opacity:.35"></span>
+    </div>
+    <p class="sub" style="margin:0 auto;max-width:70%;text-align:center">Para todas as suas necessidades de água,<br>a Tudo de Filtro é a solução.</p>
+    <p style="color:#9db8d8;margin-top:34px;font-size:12px;letter-spacing:.04em">© 2026 Tudo de Filtro · São José dos Campos · SP · tudodefiltro.com.br</p>
+  </div>
+</section>
+
+</main>
+</body>
+</html>
